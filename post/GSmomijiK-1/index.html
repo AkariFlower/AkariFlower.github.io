@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>MaryMe</title>
+<title>幻想紅葉郷#1 | MaryMe</title>
 <meta name="description" content="今日から少し頑張ります。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -14,6 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://AkariFlower.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -63,15 +71,49 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
+          <h2 class="post-title">幻想紅葉郷#1</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-08-13</span>
             
           </div>
+          <div class="post-content">
+            <blockquote>
+<p><em><strong>东方凭依华 ~ Antinomy of Common Flowers.⏱游玩时间：108分钟</strong></em></p>
+</blockquote>
+<p>前天刚刚入手的凭依华，非常感谢主人大人的赞助！货已收到，孩子很喜欢~w<br>
+<img src="https://AkariFlower.github.io//post-images/1628848290248.jpg" alt="" loading="lazy"><br>
+<img src="https://AkariFlower.github.io//post-images/1628848034452.jpg" alt="" loading="lazy"><br>
+今天试了一下123，感觉真的是远程棍机！而且如果连续赢两次的话，第二次背景会突然变成123的主场。这个是专属的特效，还是每个自机都有机会呢？</p>
+<p>整体上感觉比深秘录的操作手感稍微好了一点，不知道是不是我自己的错觉。如果不是的话，不就暴露了没有好好玩深秘录的事实了吗QAQ。</p>
+<p>以后又有更多可以和大家一起玩游戏的机会了~</p>
+<p>2021-8-13 17:54 Aurora Atresia</p>
 
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://AkariFlower.github.io/post/Mizu2/">
+              <h3 class="post-title">
+                下一篇：水信玄饼の日常#2-语言形体美的想法
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
   <div class="slogan">今日から少し頑張ります。</div>
   <div class="social-container">
     
@@ -90,8 +132,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -106,7 +148,29 @@ var app = new Vue({
 
 
 
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
 
-    </div>
+      var gitalk = new Gitalk({
+        clientID: 'a74a440cb8c434277bf0',
+        clientSecret: '201382c7156554d616a48bc1e2364a8b7e159964',
+        repo: 'AkariFlower.github.io',
+        owner: 'AkariFlower',
+        admin: ['AkariFlower'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
   </body>
 </html>
