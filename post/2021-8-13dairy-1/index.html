@@ -1,16 +1,18 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>失眠日记#1 | MaryMe</title>
 <meta name="description" content="今日から少し頑張ります。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://AkariFlower.github.io//favicon.ico?v=1628817485017">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://AkariFlower.github.io//favicon.ico?v=1628817562083">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://AkariFlower.github.io//styles/main.css">
 
@@ -21,150 +23,114 @@
 
   
 
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://AkariFlower.github.io/">MaryMe</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
-        
-          <li>
-            
-              <a href="/" class="menu">
-                HOME
-              </a>
-            
-          </li>
-        
-          <li>
-            
-              <a href="/archives" class="menu">
-                ARCHIVES
-              </a>
-            
-          </li>
-        
-      </ul>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://AkariFlower.github.io/">
+        <img class="avatar" src="https://AkariFlower.github.io//images/avatar.png?v=1628817562083" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://AkariFlower.github.io/">
+        <h1 class="site-title">MaryMe</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
     </div>
   </div>
-</nav>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>失眠日记#1</h1>
-            <p class="article-meta">
-              2021-08-13
-              
-            </p>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            HOME
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            ARCHIVES
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">失眠日记#1</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-08-13</span>
             
-            <div class="post-content">
-              <p>因为一直都被失眠困扰所以总想用一些方法消磨一下时间……想来想去还是写一点什么东西比较好吧。</p>
+          </div>
+          <div class="post-content">
+            <p>因为一直都被失眠困扰所以总想用一些方法消磨一下时间……想来想去还是写一点什么东西比较好吧。</p>
 <p>也许这样子可以更真实地表达我失眠时候的感觉……</p>
 <p>很多时候明明已经非常困乏了，闭上眼，关上灯，翻来覆去几个小时，却还是一片清醒感。满脑子都充斥着过去不堪回首的回忆，各种各样揪心的事情、不愿面对的事情、感到委屈而叹息的事情，全部毫不留情地进攻我的大脑，怎么样子才可以摆脱这些痛苦呢。</p>
 <p>从来都是用一种忧郁而黑暗的笔调记下自己的心灵，用清新而优雅的文字来描绘身边的事情。</p>
 <p>真的非常希望，可以成为一个用尽全力善待我所遇到的每一个人的角色。</p>
 <p>2021-8-13 5:09 Asatsuki</p>
 
-            </div>
-          </article>
+          </div>
         </div>
-        <div class="paper" data-aos="fade-in">
-          
-        </div>
-        
-          
-            <div class="paper" data-aos="fade-in">
-              <div id="gitalk-container"></div>
-            </div>
-          
 
-          
         
       </div>
 
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://AkariFlower.github.io//images/avatar.png?v=1628817485017" class="no-responsive avatar">
-    <div class="text-muted">今日から少し頑張ります。</div>
-    <div class="social-container">
       
         
-      
+          <div id="gitalk-container"></div>
+        
+
         
       
-        
+
+      <div class="site-footer">
+  <div class="slogan">今日から少し頑張ります。</div>
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-    </div>
+    
+      
+    
+      
+    
   </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://AkariFlower.github.io/post/shui-xin-xuan-bing-nori-chang-1/">水信玄饼の日常#1</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://AkariFlower.github.io/post/2021-8-13dairy-1/">失眠日记#1</a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-    </div>
-  </div>
-  <div class="paper">
-    もう終わりましたよ。 | <a class="rss" href="https://AkariFlower.github.io//atom.xml" target="_blank">RSS</a>
-  </div>
+  もう終わりましたよ。 | <a class="rss" href="https://AkariFlower.github.io//atom.xml" target="_blank">RSS</a>
 </div>
 
 
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
