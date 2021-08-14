@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://AkariFlower.github.io/</id>
     <title>MaryMe</title>
-    <updated>2021-08-14T21:47:14.416Z</updated>
+    <updated>2021-08-14T22:11:21.392Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://AkariFlower.github.io/"/>
     <link rel="self" href="https://AkariFlower.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, MaryMe</rights>
     <entry>
         <title type="html"><![CDATA[失眠日记#2]]></title>
-        <id>https://AkariFlower.github.io/post/2021-8-15dairy-2/</id>
-        <link href="https://AkariFlower.github.io/post/2021-8-15dairy-2/">
+        <id>https://AkariFlower.github.io/2021-8-15dairy-2/</id>
+        <link href="https://AkariFlower.github.io/2021-8-15dairy-2/">
         </link>
         <updated>2021-08-14T16:52:35.000Z</updated>
         <content type="html"><![CDATA[<p>并不是所有写出来的东西都想给别人看……但总有些事情没有人分享的话就会变得没有意义……</p>
@@ -30,8 +30,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[NEET甜点少女の次元旅行#1-Bless Unleashed]]></title>
-        <id>https://AkariFlower.github.io/post/SyojoGames-1/</id>
-        <link href="https://AkariFlower.github.io/post/SyojoGames-1/">
+        <id>https://AkariFlower.github.io/SyojoGames-1/</id>
+        <link href="https://AkariFlower.github.io/SyojoGames-1/">
         </link>
         <updated>2021-08-14T11:28:36.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -73,8 +73,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[水晶都少女手记#2]]></title>
-        <id>https://AkariFlower.github.io/post/FF14Girl-2/</id>
-        <link href="https://AkariFlower.github.io/post/FF14Girl-2/">
+        <id>https://AkariFlower.github.io/FF14Girl-2/</id>
+        <link href="https://AkariFlower.github.io/FF14Girl-2/">
         </link>
         <updated>2021-08-14T07:21:03.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -103,8 +103,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[水信玄饼の日常#3]]></title>
-        <id>https://AkariFlower.github.io/post/Mizu3/</id>
-        <link href="https://AkariFlower.github.io/post/Mizu3/">
+        <id>https://AkariFlower.github.io/Mizu3/</id>
+        <link href="https://AkariFlower.github.io/Mizu3/">
         </link>
         <updated>2021-08-14T04:02:38.000Z</updated>
         <content type="html"><![CDATA[<p><strong>这里是一般通过路人晓闭。</strong></p>
@@ -127,8 +127,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[水晶都少女手记#1]]></title>
-        <id>https://AkariFlower.github.io/post/FF14Girl-1/</id>
-        <link href="https://AkariFlower.github.io/post/FF14Girl-1/">
+        <id>https://AkariFlower.github.io/FF14Girl-1/</id>
+        <link href="https://AkariFlower.github.io/FF14Girl-1/">
         </link>
         <updated>2021-08-13T12:04:51.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -183,8 +183,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[幻想紅葉郷#1]]></title>
-        <id>https://AkariFlower.github.io/post/GSmomijiK-1/</id>
-        <link href="https://AkariFlower.github.io/post/GSmomijiK-1/">
+        <id>https://AkariFlower.github.io/GSmomijiK-1/</id>
+        <link href="https://AkariFlower.github.io/GSmomijiK-1/">
         </link>
         <updated>2021-08-13T09:42:37.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -201,8 +201,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[水信玄饼の日常#2-语言形体美的想法]]></title>
-        <id>https://AkariFlower.github.io/post/Mizu2/</id>
-        <link href="https://AkariFlower.github.io/post/Mizu2/">
+        <id>https://AkariFlower.github.io/Mizu2/</id>
+        <link href="https://AkariFlower.github.io/Mizu2/">
         </link>
         <updated>2021-08-13T06:21:43.000Z</updated>
         <content type="html"><![CDATA[<p>稍微学习了一点点Markdown的语法，以后的写作大概可以玩一些花样出来了~</p>
@@ -256,8 +256,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[水信玄饼の日常#1]]></title>
-        <id>https://AkariFlower.github.io/post/Mizu1/</id>
-        <link href="https://AkariFlower.github.io/post/Mizu1/">
+        <id>https://AkariFlower.github.io/Mizu1/</id>
+        <link href="https://AkariFlower.github.io/Mizu1/">
         </link>
         <updated>2021-08-13T00:30:41.000Z</updated>
         <content type="html"><![CDATA[<p>本来有好多火要发，仔细想想还是算了，来玩游戏的话一切烦恼都会消散了~</p>
@@ -274,8 +274,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[失眠日记#1]]></title>
-        <id>https://AkariFlower.github.io/post/2021-8-13dairy-1/</id>
-        <link href="https://AkariFlower.github.io/post/2021-8-13dairy-1/">
+        <id>https://AkariFlower.github.io/2021-8-13dairy-1/</id>
+        <link href="https://AkariFlower.github.io/2021-8-13dairy-1/">
         </link>
         <updated>2021-08-12T21:01:40.000Z</updated>
         <content type="html"><![CDATA[<p>因为一直都被失眠困扰所以总想用一些方法消磨一下时间……想来想去还是写一点什么东西比较好吧。</p>

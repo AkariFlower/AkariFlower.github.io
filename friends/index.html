@@ -1,889 +1,251 @@
 <!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://AkariFlower.github.io//media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-    <link rel="stylesheet" href="https://AkariFlower.github.io//styles/main.css">
-    <meta name="description" content="今日から少し頑張ります。" />
-    <link rel="stylesheet" href="https://AkariFlower.github.io//media/css/font-awesome.css">
-    <title>MaryMe</title>
-</head>
-<body>
-    <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <!--------------- pc端菜单栏👇 ---------------->
-                <div class="side"><head>
-    <link rel="stylesheet" href="https://AkariFlower.github.io//media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://AkariFlower.github.io//styles/main.css">
-    
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
-    
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- fancybox -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="今日から少し頑張ります。">
+<meta name="theme-color" content="#e599f7">
+<title>MaryMe</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1628978822423">
+<link rel="stylesheet" href="/media/css/gemini.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 
 
-    <!--------- 数学公式👇---- -->
-    
-    <!--------- 数学公式👆----------------- -->
-    <!--------- daovocie功能👇 ------------------->
-    
-    <!--------- daovocie功能👆 ------------------->
-    <!-- -----------------twikoo评论系统引入👇 --------->
-    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.3.1/dist/twikoo.all.min.js"></script>
-    <!-- -----------------twikoo评论系统引入👆 --------->
-    <!---------------- leancloud api 功能依赖引入👇 -------->
-    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script>
-    <!---------------- leancloud api 功能依赖引入👆 -------->
-    <!------------------ valine评论系统引入👇 ------------------>
-    <script src="https://AkariFlower.github.io//media/js/valine.min.js"></script>
-    <!------------------ valine评论系统引入👆 ------------------>
-    <!---------------- 今日诗词api功能依赖👇 ----------------------->
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <!---------------- 今日诗词api功能依赖👆 ----------------------->
-    <!---------------- 今日诗词api功能依赖👇 ----------------------->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8"></script>
-    <!---------------- 哔哔功能依赖👆 ----------------------->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
 
 
 </head>
-
-<style>
-    body {
-        overflow-x: hidden;
-        height: 100vh;
-        overflow-y: scroll;
-        cursor: url("https://AkariFlower.github.io//media/images/mouse_cursor.png"), auto
-    }
-</style>
 
 <body>
-    <!--=------ 页面加载动态画面👇 --------------->
-    <div class="pjaxloading" onclick="pjaxloadingClose()">
-        <div class="loadingbackground"></div>
-        <div id="loading-aname">
-            <div class="loading-aname">
-            </div>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
         </div>
-    </div>
-    <!--=------ 页面加载动态画面👆 --------------->
-
-    <!--------------- 左侧菜单栏👇 ------------------------>
-    
-    <!--------------- 左侧菜单栏👆 ------------------------>
-
-    <!----------------- 顶部菜单栏👇 ------------------------>
-    
-    <div>
-        <nav class="navbar navbar-inverse navbar-fixed-top navbartop">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a data-pjax class="navbar-brand" href="https://AkariFlower.github.io/"
-                        style="font-size:21px">MaryMe&nbsp;&nbsp;|&nbsp;&nbsp;</a>
-                    <a class="navbar-brand" href=""
-                        style="font-size:15px;font-family:kaiti">今日から少し頑張ります。</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    
-                    <div class="search nav navbar-nav" style="margin-top:8px">
-                        <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-                        <input type="text" class="search-input"
-                            placeholder="非常感谢能够陪伴晓闭！">
-                        <div class="search-results"></div>
-                    </div>
-                    
-                <div class="search nav navbar-nav searchtop">
-                <a title="text" onclick="document.getElementById('socialMenu').style.display='block'"><i><img class="social"
-                    src="https://AkariFlower.github.io//media/images/social.png" alt=""></i></a>
-                    <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
-                                src='https://AkariFlower.github.io//media/images/music.png' alt="音乐播放器"
-                                class="musicbtn musictop"></i></a>
-                </div>
-                <ul class="nav navbar-nav" style="float: right;margin-right:5%">
-                    
-                    
-                    <li>
-                        <a data-pjax href="/" style="color:white">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="HOME"></i>
-                            HOME
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a data-pjax href="/archives" style="color:white">
-                            <i style="font-size: 40px;"><img class="icon menuicon" src="" alt="ARCHIVES"></i>
-                            ARCHIVES
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    
-                    <!--  -->
-                  <li><img src="https://AkariFlower.github.io//images/avatar.png?v=1628977117687" alt=""
-                    class="menutopavatar"></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    </nav>
-    <div id="socialMenu">
-        <div class="animate">
-            <div class="socialContainer">
-                
-                
-                
-                
-                
-                
-                
-                
-            </div>
-            <div id="qq" style="display:none"></div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>MaryMe</span>
+            </a>  
+          
         </div>
-    </div>
-
-    <script>
-        var social = document.getElementById('socialMenu');
-        var fancybox = document.getElementsByClassName('fancybox-stage');
-        // 鼠标点击模型外区域关闭登录框
-        window.onclick = function (event) {
-            if (event.target == social) {
-                social.style.display = "none";
-            }
-        }
-    </script>
-    </div>
-    
-    <!----------------- 顶部菜单栏👆 ------------------------>
-
-<!--核心功能加载-->
-<script src="https://AkariFlower.github.io//media/js/mainfunc.js"></script>
-
-<!------------- Fog1.0版本彩蛋👇 -------------->
-    <!-- <section id="terrestrial" class="popup">
-        <a href="#" class="back">&lt; back</a>
-    </section>
-
-    <div class="flycontainer">
-        <div class="flyword">御风飞行中...</div>
-    </div>
-
-    <script>
-        $("#fog_go").click(function(){fog_go()});
-        async function fog_go(){
-            $(".bars").hide()
-            $("#live2d").hide()
-            await sleep(3000);
-            $(".flycontainer").css("display","flex");
-            $(".popup").fadeOut(500)
-            await sleep(2000);
-            var sitename = "MaryMe";
-            getFogUser(sitename);
-        }
-
-        function fog_goregis(){
-            var sitename = "MaryMe";
-            var siteurl = "https://AkariFlower.github.io/";
-            regisFogUser(sitename,siteurl);
-        }
-        fog_goregis();
-    </script> -->
-<!------------- Fog1.0版本彩蛋👆 -------------->
-
-
-<!------ 根据自定义配置声明变量👇 --------------------->
-    
-    <script>
-        let postnumChoice = false
-    </script>
-    
-    
-    <script>
-        let shareChoice = true
-    </script>
-    
-    
-    <script>
-        let donateChoice = false
-    </script>
-    
-    
-    <script>
-        let searchChoice = true
-    </script>
-    
-    <script>let postsnum = 0;</script>
-    <div id="side-posttitle" style="display: none;">
-    
-    
-    失眠日记#2
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    NEET甜点少女の次元旅行#1-Bless Unleashed
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    水晶都少女手记#2
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    水信玄饼の日常#3
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    水晶都少女手记#1
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    幻想紅葉郷#1
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    水信玄饼の日常#2-语言形体美的想法
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    水信玄饼の日常#1
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    
-    失眠日记#1
-    <script>
-        postsnum += 1
-    </script>
-    
-    
-    </div>
-    
-        <script>
-            let menupos = 'top'
-        </script>
         
-    <!------ 根据自定义配置声明变量👆 --------------------->
-
-
-    <!----------根据自定义配置设置图标信息👇---------->
-    <script>
-        var icondict = new Array();
-    </script>
-    
-    <!----------根据自定义配置设置图标信息👆---------->
-</body>
-
-<script src="https://AkariFlower.github.io//media/share/dist/Share.js"></script>
-<!-- 页面pjax测试 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
-<!--确保jQuery已经在此之前加载-->
-<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
-<script src="https://AkariFlower.github.io//media/js/all-pjax.js"></script>
-<script>
-    //-------------------------------说说功能👇--------------------------------------
-    let talksall = [];
-    let talks = [];
-    let talkindex = 0;
-    get();
-
-    function get() {
-        var t = JSON.parse('[]');
-        talkindex = t.length - 1;
-        for (var i = 0; i <= t.length - 1; i++) {
-            var d = {};
-            d["time"] = t[i].time;
-            d["author"] = t[i].author;
-            d["text"] = t[i].text;
-            d["img"] = t[i].img;
-            talksall.push(d);
-        }
-    }
-
-    function add() {
-        for (var i = talkindex; i >= 0 && i > talkindex - 3; i--) {
-            talks.push(talksall[i]);
-        }
-        talkindex = (talkindex - 3) >= 0 ? (talkindex - 3) : -1;
-        if (talkindex < 0) $("#getmorebt").hide();
-        show();
-    }
-
-    function show() {
-        var talkT = document.getElementById("talkContainer");
-        talkT.innerHTML = "";
-        for (var i = 0; i < talks.length; i++) {
-            if (talks[i].img != '') {
-                talkT.innerHTML += '\
-            <div class="talk" v-for="t in talks"> \
-                <span data-fancybox="images" href="' + talks[i].img + '"><img src="' + talks[i].img + '" class="talkimg"></span> \
-                <div class="ainfo">\
-                    <div class="ainfo-intro">\
-                        <div class="author">' + talks[i].author + '</div>·\
-                        <div class="time">' + talks[i].time + '</div>\
-                    </div>\
-                </div>\
-                <div class="talkcontent">' + talks[i].text + '\
-                </div\>\
-            ';
-            } else {
-                talkT.innerHTML += '\
-            <div class="talk" v-for="t in talks"> \
-                <div class="ainfo">\
-                    <div class="ainfo-intro">\
-                        <div class="author">' + talks[i].author + '</div>·\
-                        <div class="time">' + talks[i].time + '</div>\
-                    </div>\
-                </div>\
-                <div class="talkcontent">' + talks[i].text + '\
-                </div\>\
-            ';
-            }
-        }
-    }
-    //-------------------------------说说功能👆--------------------------------------
-</script>
-
-<!---->
-<script>
-    function replaceAvatar() {
-        twikoo_avatar = $(".tk-avatar-img");
-        for (var i = 0; i < twikoo_avatar.length; i++) {
-            var asrc = twikoo_avatar.eq(i).attr('src');
-            if (asrc.search('cn.gravatar.com') != -1) {
-                twikoo_avatar.eq(i).attr('src', 'https://AkariFlower.github.io//media/images/comavatar.png');
-            }
-        }
-    }
-
-    function showWechat() {
-        var wechat = '';
-        alert("博主微信号：" + wechat);
-        return false;
-    }
-</script>
-
-<script>
-    /**
-     * https://github.com/tangkaichuan/gridea-search
-     */
-    // 检查缓存是否最新
-    function checkCache() {
-        var caches_postsnum = localStorage.getItem("postsnum");
-        var pt = document.getElementById("side-posttitle").innerHTML;
-        pt = pt.replace(/\s+/g, '').replace(/<script>.*?<\/script>/gi, "")
-        var ptlen = pt.length;
-        var ptlen_storage = localStorage.getItem("poststitlelen");
-        if (caches_postsnum != postsnum || ptlen != ptlen_storage) {
-            console.log("更新缓存");
-            return false
-        }
-        return true;
-    }
-
-    (function () {
-        var CACHES = checkCache()
-        if (!CACHES) {
-            var NOW = Date.now()
-            var API_CONTENT = '../api-content/index.html' + '?_=' + NOW
-            preload(API_CONTENT);
-            getContents(show_getContentresult);
-        }
-
-        function show_getContentresult(data) {
-            console.log("获取成功");
-            var postslen = data["posts"].length;
-            localStorage.setItem('postsnum', postslen);
-            var poststitlelen = 0;
-            var pt = document.getElementById("side-posttitle").innerHTML;
-            pt = pt.replace(/\s+/g, '').replace(/<script>.*?<\/script>/gi, "");
-            localStorage.setItem('poststitlelen', pt.length);
-        }
-
-
-
-        // preload
-        function preload(url) {
-            var preloadLink = document.createElement('link')
-            preloadLink.href = url
-            preloadLink.rel = 'preload'
-            preloadLink.as = 'fetch'
-            preloadLink.crossOrigin = 'anonymous'
-            document.head.appendChild(preloadLink)
-        }
-
-        // 异步 GET 请求
-        function get(obj) {
-            var xhr = new XMLHttpRequest()
-            xhr.open('get', obj.url, true)
-            xhr.send(null)
-            xhr.onreadystatechange = function () {
-                // 异步请求：响应状态为4，数据加载完毕
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        obj.success(xhr.responseText)
-                    } else {
-                        obj.error(xhr.status)
-                    }
-                }
-            }
-        }
-
-        // 获取博客全文 api
-        function getContents(callback) {
-            if (CACHES) {
-                callback(CACHES.contents)
-            } else {
-                get({
-                    url: API_CONTENT,
-                    success: function (data) {
-                        callback(JSON.parse(data));
-                        localStorage.setItem('ContentsCache', data);
-                        getStorageContent();
-                    }
-                })
-            }
-        }
-    })()
-    //------------------------核心功能--pjax全局渲染👇-------------------
-    let talkinit = false;
-    $(document).pjax('a[data-pjax]', '#main', {
-        fragment: '#main',
-        timeout: 8000
-    }).on('pjax:complete', function () {
-        //代码块高亮渲染
-        document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
-        });
-        //文章热度
-        if(postnumChoice){
-            getHotnum();
-        }
-        //文章索引
-        toginit();
-        //清空搜索栏
-        if (searchChoice) {
-            searchInit();
-            searchInput.value = "";
-        }
-        var pl = window.location.pathname;
-        //说说更新
-        if (pl.search("talk") != -1 && !talkinit) {
-            add();
-            talkinit = true;
-        } else if (pl.search("talk") != -1) {
-            show();
-        }
-        if (pl.search("post") != -1) {
-            if (shareChoice)
-                shareInit();
-            if (donateChoice)
-                donateInit();
-            lazyload();
-            codeinit();
-            if ("default" == "twikoo") {
-                //twikoo头像更换
-                setTimeout(replaceAvatar, 3000);
-                setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
-            }
-        }
-        if (btstate == true)
-            dropdown();
-    }).on('pjax:start', function () {
-        $(".pjaxloading").fadeIn(50);
-    }).on('pjax:end', function () {
-        $(".pjaxloading").fadeOut(50);
-    });
-    //------------------------核心功能--pjax全局渲染👆-------------------
-
-    //-------------------------------------------------搜索
-    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
-    if (searchChoice) {
-        var searchInput = document.querySelector('.search-input');
-        var searchResults = document.querySelector('.search-results');
-    }
-    // 申明保存文章的标题、链接、内容的数组变量
-    var searchValue = '',
-        arrItems = [],
-        arrLinks = [],
-        arrTitles = [],
-        arrContents = [],
-        arrResults = [],
-        indexItem = [],
-        itemLength = 0;
-    var tmpDiv = document.createElement('div');
-    tmpDiv.className = 'result-item';
-
-
-    function getStorageContent() {
-        var data = localStorage.getItem('ContentsCache');
-        data = JSON.parse(data);
-        posts = data["posts"];
-        for (var i = 0; i < posts.length; i++) {
-            arrLinks[i] = posts[i].link;
-            arrTitles[i] = posts[i].title;
-            arrContents[i] = posts[i].content;
-            itemLength++;
-        }
-    }
-    if (checkCache())
-        getStorageContent();
-    // 输入框内容变化后就开始匹配，可以不用点按钮
-    // 经测试，onkeydown, onchange 等方法效果不太理想，
-    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
-    // 并且可以处理中文输入法拼写的变化
-    searchInput.oninput = function () {
-        setTimeout(searchConfirm, 0);
-    }
-    searchInput.onfocus = function () {
-        searchResults.style.display = 'block';
-    }
-
-    function searchConfirm() {
-        if (searchInput.value == '') {
-            searchResults.style.display = 'none';
-        } else if (searchInput.value.search(/^\s+$/) >= 0) {
-            // 检测输入值全是空白的情况
-            searchInit();
-            var itemDiv = tmpDiv.cloneNode(true);
-            itemDiv.innerText = '请输入有效内容...';
-            searchResults.appendChild(itemDiv);
-        } else {
-            // 合法输入值的情况
-            searchInit();
-            searchValue = searchInput.value;
-            // 在标题、内容中查找
-            searchMatching(arrTitles, arrContents, searchValue);
-        }
-    }
-
-    // 每次搜索完成后的初始化
-    function searchInit() {
-        arrResults = [];
-        indexItem = [];
-        searchResults.innerHTML = '';
-        searchResults.style.display = 'block';
-    }
-
-    function searchMatching(arr1, arr2, input) {
-        // 忽略输入大小写
-        input = new RegExp(input, 'i');
-        var step = 10;
-        // 在所有文章标题、内容中匹配查询值
-        for (i = 0; i < itemLength; i++) {
-            var indexContent = arr2[i].search(input);
-            //标题匹配
-            if (arr1[i].search(input) != -1) {
-                indexItem.push(i); // 保存匹配值的索引
-                if (indexContent != -1) {
-                    startindex = (indexContent - step) >= 0 ? (indexContent - step) : 0;
-                    var searchcontent = arr2[i].slice(indexContent - step, indexContent + 5)
-                    arrResults.push("....." + searchcontent + ".....");
-                } else
-                    arrResults.push("");
-            }
-            //内容匹配
-            else if (indexContent != -1) {
-                indexItem.push(i); // 保存匹配值的索引
-
-                startindex = (indexContent - step) >= 0 ? (indexContent - step) : 0;
-                var searchcontent = arr2[i].slice(indexContent - step, indexContent + 5)
-                arrResults.push("....." + searchcontent + ".....");
-            }
-        }
-
-        // 输出总共匹配到的数目
-        var totalDiv = tmpDiv.cloneNode(true);
-        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
-        searchResults.appendChild(totalDiv);
-
-        // 未匹配到内容的情况
-        if (indexItem.length == 0) {
-            var itemDiv = tmpDiv.cloneNode(true);
-            itemDiv.innerText = '未匹配到内容...';
-            searchResults.appendChild(itemDiv);
-        }
-
-        // 将所有匹配内容进行组合
-        for (i = 0; i < arrResults.length; i++) {
-            var itemDiv = tmpDiv.cloneNode(true);
-            itemDiv.innerHTML = '<a data-pjax class="searchresults" href="' + arrLinks[indexItem[i]] + '"><b>[' +
-                arrTitles[indexItem[i]] +
-                ']</b><p>' + arrResults[i] + '</p></a><hr />';
-            searchResults.appendChild(itemDiv);
-        }
-    }
-</script>
-
-
-
-<!--------------------- 菜单栏图标加载功能👇 ----------------------->
-<script>
-var menulist = $(".menuicon");
-var menulength = menulist.length;
-for (var i = 0; i < menulength; i++) {
-    var altname = menulist.eq(i).attr("alt");
-    var iconurl = icondict[altname];
-    if (iconurl == undefined || iconurl == '')
-        continue;
-    if (iconurl == 'Home') {
-        menulist.eq(i).attr("src", "https://AkariFlower.github.io//media/images/Home.png");
-menulist.eq(i).show();
-} else if (iconurl == 'Archive') {
-menulist.eq(i).attr("src", "https://AkariFlower.github.io//media/images/Archive.png");
-menulist.eq(i).show();
-} else if (iconurl == 'Tag') {
-menulist.eq(i).attr("src", "https://AkariFlower.github.io//media/images/Tag.png");
-menulist.eq(i).show();
-} else if (iconurl == 'About') {
-menulist.eq(i).attr("src", "https://AkariFlower.github.io//media/images/About.png");
-menulist.eq(i).show();
-} else if (iconurl == 'Talk') {
-menulist.eq(i).attr("src", "https://AkariFlower.github.io//media/images/Talk.png");
-menulist.eq(i).show();
-} else if (iconurl == 'Friends') {
-menulist.eq(i).attr("src", "https://AkariFlower.github.io//media/images/Friends.png");
-menulist.eq(i).show();
-} else if (iconurl == 'Fly') {
-menulist.eq(i).attr("src", "https://AkariFlower.github.io//media/images/wind.png");
-menulist.eq(i).show();
-} else {
-menulist.eq(i).attr("src", iconurl);
-menulist.eq(i).show();
-}
-}
-</script>
-<!--------------------- 菜单栏图标加载功能👆 ----------------------->
-
-<script>
-    //--------------------bber-onetalk加载👇--------------------------------
-    function bberonetalkLoad(){
-        bberjsonurl = '';
-        if ( $("#bber-talk").length > 0 ) {
-        jsonUrl = bberjsonurl
-        $.getJSON(jsonUrl+"?t="+Date.parse( new Date()),function(res){
-        var bberHtml = ''
-        $.each(res.data, function(i, item){
-            d = new Date(item.date)
-            date = d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate() +' '+d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()
-            dataTime = '<span class="datatime">'+date+'</span>'
-            bberHtml += '<li class="item item-'+(i+1)+'">'+dataTime+'： <a data-pjax href="https://AkariFlower.github.io//bber">'+item.content+'</a></li>'
-        });
-        $('#bber-talk').append('<span class="index-talk-icon"><svg viewBox="0 0 1024 1024" width="21" height="21"><path d="M184.32 891.667692c-12.603077 0-25.206154-2.363077-37.809231-7.876923-37.021538-14.966154-59.864615-49.624615-59.864615-89.009231v-275.692307c0-212.676923 173.292308-385.969231 385.969231-385.969231h78.76923c212.676923 0 385.969231 173.292308 385.969231 385.969231 0 169.353846-137.846154 307.2-307.2 307.2H289.083077l-37.021539 37.021538c-18.904615 18.116923-43.323077 28.356923-67.741538 28.356923zM472.615385 195.347692c-178.018462 0-322.953846 144.935385-322.953847 322.953846v275.692308c0 21.267692 15.753846 29.144615 20.48 31.507692 4.726154 2.363077 22.055385 7.876923 37.021539-7.08923l46.473846-46.473846c6.301538-6.301538 14.178462-9.452308 22.055385-9.452308h354.461538c134.695385 0 244.184615-109.489231 244.184616-244.184616 0-178.018462-144.935385-322.953846-322.953847-322.953846H472.615385z"></path><path d="M321.378462 512m-59.076924 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M518.301538 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M715.224615 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153846 0 59.076923 59.076923 0 1 0-118.153846 0Z"></path></svg></span><ul class="talk-list">'+bberHtml+'</ul>')
-        //Lately({ 'target': '#bber-talk .datatime' });
-        });
-        function Roll (){
-        var list_li = $('.talk-list li'),cur_li = list_li.first(),last_li = list_li.last();
-        last_li.after(cur_li);
-        };
-        setInterval(Roll,3000);
-    }
-    }
-  //--------------------bber-onetalk加载👆--------------------------------
-</script>
-
-
-</div>
-                <!--------------- pc端菜单栏👆 ---------------->
-                <!----------- 移动端导航栏👇 ----------------->
-                <div class="mobilebar"><head>
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://AkariFlower.github.io//media/css/bootstrap.min.css">
-</head>
-<style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
-
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" href="https://AkariFlower.github.io/">MaryMe&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
+          <p class="subtitle">一颗糖和一生一世的朋友</p>
         
-        
-        <li>
-          <a data-pjax href="/">
-            HOME
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/archives">
-            ARCHIVES
-          </a>
-        </li>
-        
-        
-        
-        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> HOME
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> ARCHIVES
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> FRIENDS
+                  
+                </a>
+              </li>
+            
+          
           
         </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+      </nav>
+    </div>
+  </header>
+</div>
 
+<script type="text/javascript"> 
+ 
+  let showNav = true;
 
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
     }
-  </script> 
-                <!----------- 移动端导航栏👆 ----------------->
-                </div>
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-                
-                <div class="col-md-2 col-lg-3"></div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-6 posttop">
-                    <body>
-    <div id="friendscontainermobile">
-        
-    </div>
+  }
 
-    <div id="pcintroimg">
-        <div class="sea">
-            <p class="title">友人帐</p>
-            <span class="wave"></span>
-            <span class="wave"></span>
-            <span class="wave"></span>
-        </div>
-    </div>
-
-    <div id="friendscontainer">
-        <div id="friendsrule">
-            <p>暂无提示</p><p>暂无提示</p>
-        </div>
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout gemini ">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">晓闭</p>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
         
+        <span class="site-item-stat-count">9</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
     </div>
-</body>
-                    <div class="tog">
-                        <div class="toggleContainer">
-                            <div class="toggle">
-                                <i class="fas fa-angle-double-up"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="comment" class="comment">
-                        <div class="commentcontainer">
-                            
-                                
-                                    
-                                        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://AkariFlower.github.io//atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+
+
+
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="/media/js/magic/clock.js"></script>
+  </div>
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box gemini box-shadow-wrapper">
+          <section class="friends-section bg-color slide-down-in">
+            <div class="firends-box">
+              <h1 class="firends-title" itemprop="name headline">FRIENDS</h1>
+              
+              
+              
+            </div>
+            <hr>
+            <div style="text-align:center">
+              <span class="with-love">
+                <i class="fa fa-heart"></i>
+              </span>
+              <span class="language" data-lan="leave-message">留言添加友链</span>
+              <span class="with-love">
+                <i class="fa fa-heart"></i>
+              </span>
+            </div>
+            <hr>
+            <div class="friends-note">
+              <p><strong class="language" data-lan="format">友链格式：</strong></p>
+              <ul>
+                <li><span class="language" data-lan="site-name">网站名称：</span>MaryMe</li>
+                <li><span class="language" data-lan="site-link">网站地址：</span><a href="https://AkariFlower.github.io/" data-pjax-state="">https://AkariFlower.github.io/</a></li>
+                <li><span class="language" data-lan="site-desc">网站描述：</span>今日から少し頑張ります。</li>
+                <li><span class="language" data-lan="site-img">网站头像：</span>
+                  <a href="https://AkariFlower.github.io//images/avatar.png">https://AkariFlower.github.io//images/avatar.png</a>
+                </li>
+              </ul>
+            </div>
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
 
 <script>
-
   var gitalk = new Gitalk({
     clientID: 'a74a440cb8c434277bf0',
     clientSecret: '201382c7156554d616a48bc1e2364a8b7e159964',
@@ -893,155 +255,923 @@ menulist.eq(i).show();
     id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
     distractionFreeMode: false  // Facebook-like distraction free mode
   })
-
   gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <span id="busuanzi_container_site_pv">浏览数 <span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span> 人</span>
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> ©2019 | Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      もう終わりましたよ。
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+  <div class="bg-img">
+    <img src="\media\images\custom-bgImg.jpg" />
+  </div>
+  
+  
+  
+  
+<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 5px;bottom: px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'histoire'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.addEventListener('resize', function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, 'stop');
+      jQuery.Velocity(viewport, 'stop');
+      jQuery.Velocity(rightMotions, 'stop');
+      if (open) {
+        jQuery.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        jQuery.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'true'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch && faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "静静地等你回来哟……";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
 
 </script>
 
-                                    
-                                    
-                                
-                            
-                        </div>
-                    </div>
-                    <div style="display: none;">
-                        
-                            <style>
-    .copyright {
-        font-size: 15px;
-        color: #d9d9d9;
-    }
-
-
-    @media screen and (min-width: 1200px) {
-        .foot {
-            width: 100%;
-            height: 130px;
-        }
-    }
-
-    @media screen and (max-width: 1200px) {
-        .foot {
-            display: none;
-        }
-    }
-</style>
-
-<body>
-    <div class="foot">
-        <div id="footinfo">もう終わりましたよ。 | Theme: <a
-                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
-            <div>
-                
-                <div id="sitegotimeDate">载入天数...</div>
-                <div id="sitegotimes">载入时分秒...</div>
-                <div id="cussitetime" style="display:none">08/13/2021</div>
-                
-            </div>
-            <div>
-                
-            </div>
-            <div class="copyright" style="color:white;text-align: center;">
-            </div>
-        </div>
-
-
-
-    </div>
-</body>
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
 
 <script>
-    //----------------------站点运行时间
-    var now = new Date();
-
-    function createtime() {
-        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
-        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
-        now.setTime(now.getTime() + 250);
-        days = (now - grt) / 1000 / 60 / 60 / 24;
-        dnum = Math.floor(days);
-        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
-        hnum = Math.floor(hours);
-        if (String(hnum).length == 1) {
-            hnum = "0" + hnum;
-        }
-        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-        mnum = Math.floor(minutes);
-        if (String(mnum).length == 1) {
-            mnum = "0" + mnum;
-        }
-        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-        snum = Math.round(seconds);
-        if (String(snum).length == 1) {
-            snum = "0" + snum;
-        }
-        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
-        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-    }
-
-    let intervalId = setInterval("createtime()", 250);
+  let images = document.querySelectorAll('.section img');
+  images.forEach(image => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'images';
+    aelem.dataset['rel'] = 'fancybox-button';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  })
 </script>
 
-                            
-                    </div>
-                </div>
-                <div class="col-md-2 col-lg-3">
-                </div>
-            <div id="bg">
-            </div>
-        </div>
-        
-        <!------------------ 顶部菜单栏html👆--------->
-        
-
-    </div>
-    
-    <div class="tog">
-        <div class="toggleContainer">
-            <div class="toggle">
-                <i class="fas fa-angle-double-up"></i>
-            </div>
-        </div>
-    </div>
-    <div id="bgchoice" style="display: none">link</div>
-    
-    <div id="bgurl" style="display:none"></div>
-    
-    </div>
-    <div id="landlord">
-        <div class="message" style="opacity:0"></div>
-        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-    </div>
-    <div id="domainname" style="display:none">https://AkariFlower.github.io/</div>
+  </div>
 </body>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+<script src="/media/js/mouse/love.js"></script>
+
+
+
+
+  <div class="snow-container"></div>
+  <script src="/media/js/bg/snow.js"></script>
+
+
 </html>
-
-<!-------------------- live2d功能👇 --------------------------->
-
-<script type="text/javascript">
-    var message_Path = '/live2d/'
-    var home_Path = document.getElementById("domainname").innerHTML+"/"; //此处修改为你的域名，必须带斜杠
-</script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js"></script>
-<script type="text/javascript" src="https://AkariFlower.github.io//media/live2d/js/message.js"></script>
-<script type="text/javascript">
-    loadlive2d("live2d", "https://AkariFlower.github.io//media/live2d/assets/tororo.model.json");
-</script>
-
-<!-------------------- live2d功能👆 --------------------------->
-
-<!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
-<script>
-        var bgchoice=$('#bgchoice').html();
-        var bg = $('#bg');
-        var bgurl = document.getElementById("bgurl").innerHTML;
-        if(bgchoice=='default')
-            for (var i = 0; i < 3; i++)
-                bgurl = bgurl.replace("\\", "/");
-        bg.css("background", "url('" + bgurl + "')");
-
-        window.onload = function(){
-            aplayerbtnInit();
-        }
-</script>
-<!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
