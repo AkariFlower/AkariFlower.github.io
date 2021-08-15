@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://AkariFlower.github.io/</id>
     <title>MaryMe</title>
-    <updated>2021-08-15T09:33:08.286Z</updated>
+    <updated>2021-08-15T09:41:59.378Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://AkariFlower.github.io/"/>
     <link rel="self" href="https://AkariFlower.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://AkariFlower.github.io/images/avatar.png</logo>
     <icon>https://AkariFlower.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MaryMe</rights>
+    <entry>
+        <title type="html"><![CDATA[NEET甜点少女の次元旅行#2-Europa Universalis IV]]></title>
+        <id>https://AkariFlower.github.io/SyojoGames-2/</id>
+        <link href="https://AkariFlower.github.io/SyojoGames-2/">
+        </link>
+        <updated>2021-08-15T09:29:52.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><em><strong>Europa Universalis IV⏱游玩时间0分钟</strong></em></p>
+</blockquote>
+<p>EU4降价80%超良心——果断购买跑到库里吃灰去吧！</p>
+<p>一直以来都是忠实的P社玩家，但是从来没有时间开长坑。等到毕业以后一定要尽兴地跑一场马拉松！</p>
+<p>就这样，留着夜里没什么事情做了再玩w</p>
+<p>2021-8-15 17:40 Aurora Atresia</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[水晶都少女手记#3-天穹庆典特别篇]]></title>
         <id>https://AkariFlower.github.io/FF14Girl-3/</id>
@@ -331,24 +346,6 @@ BOSS3：肌肉莫古力<br>
 <figure data-type="image" tabindex="1"><img src="https://AkariFlower.github.io//post-images/1628839708167.jfif" alt="" loading="lazy"></figure>
 <p>尺寸有点小？呼……野心不要太大喔。</p>
 <p>2021-8-13 15:31 Aurora Atresia</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[水信玄饼の日常#1]]></title>
-        <id>https://AkariFlower.github.io/Mizu1/</id>
-        <link href="https://AkariFlower.github.io/Mizu1/">
-        </link>
-        <updated>2021-08-13T00:30:41.000Z</updated>
-        <content type="html"><![CDATA[<p>本来有好多火要发，仔细想想还是算了，来玩游戏的话一切烦恼都会消散了~</p>
-<p>不过，最近也遇到了很多很多问题，比如就在玩什么游戏上有困难。最近刚刚入手了凭依华，但是却没什么时间和CP一起玩。偶尔能够摸一下的FF14，也没办法好好地享受。想要有新颖体验但又不需要花费太多精力的游戏，真的好难找。</p>
-<p>待会儿试试看能不能开启评论功能，这样子就可以和来访者开心地聊天了。第一次经营个人博客，也只是想有一个地方倾诉一下心声，或者在无聊的时候稍微打发一下时间……如果能被理解的话就最好了。</p>
-<p>另外，因为习惯问题，也许说话的语气会和平时不太一样吧……在博客上大概会更加喜欢现在这样子的表达。Markdown也还没开始学，以后的文章也许会更加多样吧~</p>
-<p>水信玄饼是一种日本的和菓子，据说口感入口即化，配上糖浆吃真的会非常惊艳。大概长这个样子：</p>
-<p><img src="https://AkariFlower.github.io//post-images/1628815624823.jfif" alt="" loading="lazy"><br>
-<img src="https://AkariFlower.github.io//post-images/1628815627654.jfif" alt="" loading="lazy"></p>
-<p>如果能够吃到就好了~虽然好像自己做也不需要花费太大的力气，但是从现在开始购置材料和工具好像有点太晚了。</p>
-<p>生活若能像水信玄饼一样清净又不失自己的特色该多好。</p>
-<p>2021-8-13 8:49 Asatsuki</p>
 ]]></content>
     </entry>
 </feed>
