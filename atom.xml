@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://AkariFlower.github.io/</id>
     <title>MaryMe</title>
-    <updated>2021-08-17T06:12:03.582Z</updated>
+    <updated>2021-08-17T12:16:34.474Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://AkariFlower.github.io/"/>
     <link rel="self" href="https://AkariFlower.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://AkariFlower.github.io/images/avatar.png</logo>
     <icon>https://AkariFlower.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MaryMe</rights>
+    <entry>
+        <title type="html"><![CDATA[织梦#0]]></title>
+        <id>https://AkariFlower.github.io/Dreams-0/</id>
+        <link href="https://AkariFlower.github.io/Dreams-0/">
+        </link>
+        <updated>2021-08-17T12:14:42.000Z</updated>
+        <content type="html"><![CDATA[<p>一般通过路人晓闭。</p>
+<p>梦境真实记录专栏。</p>
+<p>存目。</p>
+<p>2021-8-17 20:16 Aurora Atresia</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[NEET甜点少女の次元旅行×幻想紅葉郷特别篇“東方风云”#1]]></title>
         <id>https://AkariFlower.github.io/SyojoGames-EU4th1/</id>
@@ -285,36 +297,6 @@ BOSS3：肌肉莫古力<br>
 <p>本来还想继续玩下去但是晓音酱发了超级吸引人的音乐会现场。</p>
 <h2 id="还有什么能比最终幻想xiv还好玩的呢">还有什么能比最终幻想XIV还好玩的呢？</h2>
 <p>2021-8-14 21:42 Aurora Atresia</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[水晶都少女手记#2]]></title>
-        <id>https://AkariFlower.github.io/FF14Girl-2/</id>
-        <link href="https://AkariFlower.github.io/FF14Girl-2/">
-        </link>
-        <updated>2021-08-14T07:21:03.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p><em><strong>FINAL FANTASY XIV⏱游玩时间405小时</strong></em></p>
-</blockquote>
-<p>今天搓了一下午的生产……就是为了把炼金练到满级去水晶都印钞！</p>
-<p>在得知了交巨匠是多么赚钱之后，终于明白为什么水晶都理符那边永远都是人山人海了。</p>
-<p>有了沐晴前辈送的宏和触发，据说15分钟就可以交完100个理符。虽然不知道这是什么概念……但是据说一个月能赚400万以上，感觉有些心动了~</p>
-<p>前辈自己也是从板子上直接买巨匠然后交上去的，这样子好像很方便，有触发之后又可以非常快。并且不需要每天都挂在那边……或许真的比RP轻松好多呢。</p>
-<p>不过！RP时候的那种愉快感是这些理符任务完全无法比拟的~<br>
-<img src="https://AkariFlower.github.io//post-images/1628926109967.png" alt="" loading="lazy"><br>
-背包里全是70级重建的肥皂www<br>
-<img src="https://AkariFlower.github.io//post-images/1628926325672.png" alt="" loading="lazy"><br>
-居然！真的可以抽中1等奖！！历史性的时刻诞生了！！！</p>
-<p>啊不过是不想要的三角龙龙……板子伺候好了。</p>
-<p>如果能抽中休闲该多好w……</p>
-<p>第一次去水晶都交巨匠印钞，原来真的有这么轻松这么效率的赚钱方法！真的太厉害了……感谢沐晴前辈的指导~<br>
-<img src="https://AkariFlower.github.io//post-images/1628929602840.png" alt="" loading="lazy"></p>
-<p>入手了一件非常好看的发光武器w<br>
-<img src="https://AkariFlower.github.io//post-images/1628932630288.png" alt="" loading="lazy"><br>
-<img src="https://AkariFlower.github.io//post-images/1628932634400.png" alt="" loading="lazy"><br>
-<img src="https://AkariFlower.github.io//post-images/1628932637760.png" alt="" loading="lazy"><br>
-以后也要更加快乐地玩FF14呢~</p>
-<p>2021-8-14 17:18 Aurora Atresia</p>
 ]]></content>
     </entry>
 </feed>
