@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="今日から少し頑張ります。">
 <meta name="theme-color" content="#e599f7">
-<title>MaryMe</title>
+<title>NEET甜点少女の次元旅行×幻想紅葉郷特别篇“東方风云”#1 | MaryMe</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1629173381878">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -41,7 +41,8 @@
 
 
 
-  <meta name="description" content="今日から少し頑張ります。">
+  <meta name="description" content="NEET甜点少女の次元旅行×幻想紅葉郷特别篇“東方风云”#1" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -90,7 +91,7 @@
             
               
             
-            <li class="nav-item nav-item-active">
+            <li class="nav-item ">
               
               
                 <a href="/archives/" target="_self">
@@ -142,317 +143,230 @@
   <div class="main-continer">
     
     <div
-      class="section-layout  gemini">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">晓闭</p>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
         
-        <span class="site-item-stat-count">16</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">0</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">0</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
-      </a>
-    </div>
-  </div>
+
+<div class="sidebar">
   
-    
-      <div class="sidebar-item">
-        <span class="site-item-rss">
-            <i class="fa fa-rss"></i>
-            <a href="https://AkariFlower.github.io//atom.xml" target="_blank">RSS</a>
-        </span>
-      </div>
-    
-  
-  
-
-
-
-  <div style="width: 100%; position: relative;">
-    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
-    <script src="/media/js/magic/clock.js"></script>
-  </div>
-
-</div>
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
-      }
-    });
-  }
-  </script>
-        <div class="section-box box-shadow-wrapper">
-          <section class="section archives-section bg-color posts-expand">
-            
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
 
-<div class="bg-color">
-  <div class="archive-timeline-box">
-    <div class="archive-timeline-title">
-      
-        <h2 class="language" data-lan="archives" data-count="16">非常好！目前共计16篇日志，继续努力！</h2>
-      
-    </div>
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    jQuery.Velocity(hideElement, 'stop');
+    jQuery.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        jQuery.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <section class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://AkariFlower.github.io/SyojoGames-EU4th1/">
+      NEET甜点少女の次元旅行×幻想紅葉郷特别篇“東方风云”#1
+    </a>
+  </h1>
+  <div class="post-meta">
     
-      
-      
-        <div class="node-title">
-          <h2 class="tag-year">2021</h2>
-        </div>    
-        
-      
-      <a href="https://AkariFlower.github.io/SyojoGames-EU4th1/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-17
-              <small>NEET甜点少女の次元旅行×幻想紅葉郷特别篇“東方风云”#1</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span class="publish-time" data-t="2021-08-17 10:51:36">2021-08-17</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
     
-      
-      
-      <a href="https://AkariFlower.github.io/2021-8-17dairy-4/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-17
-              <small>失眠日记#4</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/Mizu5/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-16
-              <small>水信玄饼の日常#5-世界，早安！</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/2021-8-16dairy-3/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-16
-              <small>失眠日记#3</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/SyojoGames-2/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-15
-              <small>NEET甜点少女の次元旅行#2-Europa Universalis IV</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/FF14Girl-3/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-15
-              <small>水晶都少女手记#3-天穹庆典特别篇</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/Mizu4/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-15
-              <small>水信玄饼の日常#4-欢迎来到MaryMe~</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/2021-8-15dairy-2/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-15
-              <small>失眠日记#2</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/SyojoGames-1/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-14
-              <small>NEET甜点少女の次元旅行#1-Bless Unleashed</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/FF14Girl-2/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-14
-              <small>水晶都少女手记#2</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/Mizu3/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-14
-              <small>水信玄饼の日常#3</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/FF14Girl-1/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-13
-              <small>水晶都少女手记#1</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/GSmomijiK-1/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-13
-              <small>幻想紅葉郷#1</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/Mizu2/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-13
-              <small>水信玄饼の日常#2-语言形体美的想法</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/Mizu1/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-13
-              <small>水信玄饼の日常#1</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
-    
-      
-      
-      <a href="https://AkariFlower.github.io/2021-8-13dairy-1/">
-        <div class="motion-warpper tag-archive-node">
-          <div class="tag-node">
-            <h1>
-              08-13
-              <small>失眠日记#1</small>
-            </h1>
-          </div>  
-      </div>
-      </a>
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>6<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>1698<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
     
   </div>
-  
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/archives/page/../">
-              1
-            </a>
-        </li>
-      
-    
-    
-  </ul>
-</div>
-</div>
+</section>
+            <div class="post-body next-md-body" id="post_body">
+              <blockquote>
+<p><em><strong>Europa Universalis IV⏱游玩时间小时</strong></em></p>
+</blockquote>
+<h2 id="边享用华丽的甜点边玩有意思的游戏人类会非常幸福-晓闭第一定律">边享用华丽的甜点边玩有意思的游戏，人类会非常幸福。——晓闭第一定律。</h2>
+<p>这里是一般通过妖精晓闭。</p>
+<p>上一次的次元旅行2非常草草了事地就那样结束了，这一次会专心用大把时间来撰写一期特别篇！</p>
+<p>其实就是看海。（水文章）</p>
+<p>有关于EU4的事情其实有非常非常多的东西可以去写，不过最符合我风格的果然还是东方mod吧。</p>
+<p>现实历史的看海也早就已经腻了吧，不妨来观摩一下幻想乡的历史更迭~</p>
+<p>以下是这次使用的mod列表，没有DLC，版本是Steam正版1.31.5.2<br>
+<img src="https://AkariFlower.github.io//post-images/1629169257567.png" alt="" loading="lazy"></p>
+<h2 id="game-start">GAME START</h2>
+<p><img src="https://AkariFlower.github.io//post-images/1629169611145.png" alt="" loading="lazy"><br>
+1444年的幻想乡，天气晴朗w（感觉两个神社的势力范围有一些大。冥界还是小了点）</p>
+<p>1446年9月，永远亭被人类村落与藤原妹红两面包夹芝士w，向二者割地。可以说是局部战争（家暴）的开端。</p>
+<p>1447~1448年，幻想乡中部（雾之湖北）不停发生摩擦。1448年年初，妖怪之森向丰收神社宣战，地灵殿参战（与丰收同盟）。年底，这场战争结束，妖怪之森大败，向丰收神社割地。<br>
+<img src="https://AkariFlower.github.io//post-images/1629170170685.png" alt="" loading="lazy"><br>
+1450年的幻想乡，局势已经很紧张惹。</p>
+<p>1449~1450，天狗王国率领河童与仙界展开大战，最后以仙人们的失败告终（离谱），向河童割地。与此同时，幻想乡中部的妖怪之森已经处在被其他小国吞并的边缘……w</p>
+<p>1452年，守矢神社、地灵殿、天狗一同向幻想乡边境、无名冢等地进军，并快速取得优势。与此同时，四季映姬率领的彼岸大军也来分一杯羹。</p>
+<p>1454年5月1日，彼岸与无名冢方面结束战争，无名冢大败，向彼岸割地。与此同时，命莲寺与仙界展开大型宗教战争w，取得优势。在幻想乡南方，红魔馆与博丽神社的战争也拉开序幕。（东  方  红  魔  乡）</p>
+<p>1454年11月17日，守矢神社与边境方面结束战争，边境大败，向守矢割地。幻想乡中部因为小国众多，仍处于难以报道的混战状态。</p>
+<p>1455年初，地灵殿向鬼族进军，觉大人准备统治旧地狱了喵w。这场战争只花了4个多月，鬼族向地灵殿割地。</p>
+<p>1455年12月1日，仙界被命莲寺完全占领后投降，向命莲寺割地。w这就是莲妈的实力嘛。</p>
+<p>1456年，幻想乡东南部（包括博丽神社，八云一族，红魔馆，魔法森林，冥界等……）陷入大规模混战。交战双方难以辨认。其后，东北部的人类村落也参与战争。</p>
+<p>1456年12月27日，博丽神社-红魔馆方面结束战争，博丽大败，向红魔馆割地（满  身  疮  痍）。与此同时，八云一族退出战争，魔法森林现被人类村落和冥界包夹（东  方  妖  妖  梦），有被分割吞并的危险w。</p>
+<p>1457年7月24日，冥界-魔法森林方面结束战争，魔法森林大败，向冥界割地。结合上面来看w……可以说是红魔乡与妖妖梦全部退治失败惹！没有人注意到的是，太阳花田正悄悄对外扩张……</p>
+<p>1457年底，鬼族与博丽神社展开大战（东  方  萃  梦  想）。</p>
+<p>1458年4月17日，人类村落-魔法森林方面结束战争，魔法森林大败，向人类割地。呜呜……金发的女孩子好可怜。同年7月8日，博丽神社成功镇压鬼族，并将之完全吞并（纳入后宫）。至此，幻想乡东部重归和平。</p>
+<h2 id="和原作不能说一模一样只能说完全符合">和原作不能说一模一样，只能说完全符合</h2>
+<p>1458年底，从来不被注意的幻想乡北部正大打出手，魔界、太阳花田、辉针城、旧日博丽神社正互相交战。这实质上是魔界对其他国家的侵略战争。</p>
+<p>1459年底到1460年初，红魔馆以闪电之势吞下心绮楼的一半，完成了向雾之湖北的初步扩张。<br>
+<img src="https://AkariFlower.github.io//post-images/1629171772602.png" alt="" loading="lazy"><br>
+1460年的幻想乡，短短10年发生了很多事情呢。</p>
+<p>1461年底，幻想乡北部的魔界扩张战争中，以旧日博丽神社为领导的抵抗军一转攻势，向着魔界首都进军。</p>
+<p>1462年3月8日，<strong>妇女节快乐www</strong>，红魔馆直接吞并附庸琪露诺，成为幻想乡东南方最强大的势力。</p>
+<p>1462年4月28日，持续了将近5年的魔界大战终于以魔界的无条件投降告一段落，幻想乡北部版图基本没有变化。与此同时，天界竟悄悄向幻想乡出手……</p>
+<p>1463年，幻想乡中部再次陷入混战，其中天狗与命莲寺的争斗尤为突出。守矢神社也被卷入战争当中。</p>
+<p>1463年12月1日，天狗霸占命莲寺，命莲寺向天狗大面积割地，至此再无星莲船w。19日，守矢神社和河童方面也结束战争，这次是妖怪之山的大胜利~。同时这场战争的结束也宣告了幻想乡第一次大和平的到来。</p>
+<p>1464年3月3日，持续了4个月多一点的幻想乡大和平被太阳花田打破w……向天界宣战后，太阳花田直接占领了天界边境。4月9日，彼岸吞并附庸三途川，和地灵殿直接接壤，成为幻想乡西部最强悍的势力。</p>
+<p>1465年，大家都很不安分。冥界攻打藤原妹红，八云一族攻打博丽神社（城  管  内  战），仙界与旧日博丽神社展开战争，而红魔馆则再度向幻想乡中部（雾之湖北）伸出魔爪。</p>
+<p>1467年10月5日，幻想乡中部战争完全结束，红魔馆势力空前壮大，丰收神社、心绮楼等小国获得更多生存空间。</p>
+<p>1468年1月30日，藤原妹红被冥界制裁（但幽幽子还是杀不死蓬莱人w），向冥界割地。</p>
+<p>1469年5月19日，魔界、仙界对旧日博丽神社（家暴w）的战争结束，旧日博丽神社被割地到只剩下最后一个小省份。</p>
+<p>1470年初，红魔馆再次侵略博丽神社（红雾异变再临），与此同时，命莲寺与人类村落的战争（宗  教  改  革）也已经打响w。<br>
+<img src="https://AkariFlower.github.io//post-images/1629173168013.png" alt="" loading="lazy"><br>
+1470年的幻想乡。</p>
+<p>接下来进入我们的保存并退出环节w，更多有意思的看海还是等到下一次啦~</p>
+<p>2021-8-17 12:09 Aurora Atresia</p>
 
-          </section>
+            </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      晓闭
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://AkariFlower.github.io/SyojoGames-EU4th1/" title="NEET甜点少女の次元旅行×幻想紅葉郷特别篇“東方风云”#1">https://AkariFlower.github.io/SyojoGames-EU4th1/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="失眠日记#4" href="https://AkariFlower.github.io/2021-8-17dairy-4/">失眠日记#4</a>
+        <a class="nav-mobile-next" title="失眠日记#4" href="https://AkariFlower.github.io/2021-8-17dairy-4/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'a74a440cb8c434277bf0',
+    clientSecret: '201382c7156554d616a48bc1e2364a8b7e159964',
+    repo: 'AkariFlower.github.io',
+    owner: 'AkariFlower',
+    admin: ['AkariFlower'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -1183,6 +1097,223 @@
   })
 </script>
 
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        jQuery.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        jQuery.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        jQuery.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        jQuery.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      jQuery.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      jQuery.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -1363,6 +1494,5 @@
 
   <div class="snow-container"></div>
   <script src="/media/js/bg/snow.js"></script>
-
 
 </html>
